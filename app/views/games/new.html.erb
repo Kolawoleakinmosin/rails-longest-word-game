@@ -1,0 +1,12 @@
+<h1>NEW GAME</h1>
+<h2><% @random_letters.each do |letter| %>
+<%= letter %>
+<% end %>
+</h2>
+
+<form action="/score" method="post" data-turbo="false">
+  <label for="guess">What's The Longest Word You Can Find:</label><br>
+  <input type="text" name="guess" id="guess"><br>
+  <input type="submit" name="" id="">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
